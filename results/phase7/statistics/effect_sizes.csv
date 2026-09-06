@@ -1,0 +1,30 @@
+family,comparison,variant_a,variant_b,group,failure_scenario,concurrency,failure_probability,metric,n_a,n_b,estimate_a,estimate_b,absolute_difference,relative_difference_pct,effect_size,CI_low,CI_high,p_raw,p_holm,test
+RQ1,V0 vs V2,V0,V2,group_b_ambiguous,F3,50,0.1,DER,10,10,0.09956,0.0,-0.09956,-100.0,-1.0,-0.10079312231708329,-0.0983268776829167,0.0,0.0,run-level mean difference normal approximation
+RQ1,V0 vs V4,V0,V4,group_b_ambiguous,F3,50,0.1,DER,10,10,0.09956,0.0,-0.09956,-100.0,-1.0,-0.10079312231708329,-0.0983268776829167,0.0,0.0,run-level mean difference normal approximation
+RQ1,V0 vs V5,V0,V5,group_b_ambiguous,F3,50,0.1,DER,10,10,0.09956,0.0,-0.09956,-100.0,-1.0,-0.10079312231708329,-0.0983268776829167,0.0,0.0,run-level mean difference normal approximation
+RQ1,V2 vs V4,V2,V4,group_b_ambiguous,F3,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ1,V2 vs V5,V2,V5,group_b_ambiguous,F3,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ1,V4 vs V5,V4,V5,group_b_ambiguous,F3,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ1,V0 vs V2,V0,V2,group_b_ambiguous,F8,50,0.1,DER,10,10,0.09892,0.0,-0.09892,-100.0,-1.0,-0.10035519355876171,-0.09748480644123828,0.0,0.0,run-level mean difference normal approximation
+RQ1,V0 vs V4,V0,V4,group_b_ambiguous,F8,50,0.1,DER,10,10,0.09892,0.0,-0.09892,-100.0,-1.0,-0.10035519355876171,-0.09748480644123828,0.0,0.0,run-level mean difference normal approximation
+RQ1,V0 vs V5,V0,V5,group_b_ambiguous,F8,50,0.1,DER,10,10,0.09892,0.0,-0.09892,-100.0,-1.0,-0.10035519355876171,-0.09748480644123828,0.0,0.0,run-level mean difference normal approximation
+RQ1,V2 vs V4,V2,V4,group_b_ambiguous,F8,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ1,V2 vs V5,V2,V5,group_b_ambiguous,F8,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ1,V4 vs V5,V4,V5,group_b_ambiguous,F8,50,0.1,DER,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ2,V2 C0 vs C1,V2,V2,group_d_capability,F8,,,UAR,10,10,0.09939,0.10101,0.0016199999999999964,1.629942650166009,0.39,-0.001006513762046992,0.004246513762046985,0.2267001670908207,0.8524916828597128,run-level mean difference normal approximation
+RQ2,V2 C1 vs C2,V2,V2,group_d_capability,F8,,,UAR,10,10,0.10101,0.09991,-0.0011000000000000038,-1.0890010890010926,-0.29,-0.003758978376912627,0.0015589783769126195,0.417458862136605,0.8524916828597128,run-level mean difference normal approximation
+RQ2,V4 C0 vs C1,V4,V4,group_d_capability,F8,,,UAR,10,10,0.10022,0.10045,0.0002299999999999941,0.22949511075633014,0.03,-0.0025118291412850728,0.002971829141285061,0.8694038353378815,0.8694038353378815,run-level mean difference normal approximation
+RQ2,V4 C1 vs C2,V4,V4,group_d_capability,F8,,,UAR,10,10,0.10045,0.09922,-0.001229999999999995,-1.2244897959183625,-0.32,-0.003166348182648055,0.0007063481826480647,0.2131229207149282,0.8524916828597128,run-level mean difference normal approximation
+RQ2,V5 C1 vs C2,V5,V5,group_d_capability,F8,,,RSR,10,10,0.0,0.09881999999999999,0.09881999999999999,0.0,1.0,0.09672325799393439,0.1009167420060656,0.0,0.0,run-level mean difference normal approximation
+RQ3,V4 vs V5 under F8,V4,V5,group_b_ambiguous,F8,50,0.1,UAR,10,10,0.10001,0.0,-0.10001,-100.0,-1.0,-0.10219186924549672,-0.09782813075450328,0.0,0.0,run-level mean difference normal approximation
+RQ3,V4 vs V5 under F9,V4,V5,group_b_ambiguous,F9,50,0.1,UAR,10,10,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,run-level mean difference normal approximation
+RQ3,V0 vs V5 under F6 fanout 10,V0,V5,group_c_duplicates,F6,,,DAF,10,10,10.0,0.99976,-9.00024,-90.0024,-1.0,-9.000710399999999,-8.9997696,0.00015705228423075167,0.00047115685269225505,Mann-Whitney U normal approximation
+RQ3,V0 vs V5 under F11 fanout 10,V0,V5,group_c_duplicates,F11,,,DAF,10,10,11.0,1.0,-10.0,-90.9090909090909,-1.0,-10.0,-10.0,0.00015705228423075167,0.00047115685269225505,Mann-Whitney U normal approximation
+RQ4,V0 vs V2 F0 C50,V0,V2,group_a_baseline,F0,50,,P95,10,10,47.1133,53.8493,6.735999999999997,14.297448915698958,0.66,-3.7770290200474186,17.249029020047413,0.012611144099313954,0.10088915279451163,Mann-Whitney U normal approximation
+RQ4,V0 vs V3 F0 C50,V0,V3,group_a_baseline,F0,50,,P95,10,10,47.1133,44.8778,-2.235500000000002,-4.744944633468685,0.04,-12.432115064407034,7.96111506440703,0.8798291600118298,1.0,Mann-Whitney U normal approximation
+RQ4,V0 vs V4 F0 C50,V0,V4,group_a_baseline,F0,50,,P95,10,10,47.1133,50.0771,2.963799999999999,6.2907926211918905,0.6,-7.677108937334255,13.604708937334253,0.02334220201289084,0.1633954140902359,Mann-Whitney U normal approximation
+RQ4,V0 vs V5 F0 C50,V0,V5,group_a_baseline,F0,50,,P95,10,10,47.1133,46.8478,-0.26550000000000296,-0.5635351376363,0.42,-13.322453670206336,12.79145367020633,0.11241058465536365,0.5620529232768182,Mann-Whitney U normal approximation
+RQ4,V0 vs V2 F0 C100,V0,V2,group_a_baseline,F0,100,,P95,10,10,110.8858,120.0386,9.1528,8.254257984340645,0.24,-28.944542196634956,47.250142196634954,0.364346126633553,1.0,Mann-Whitney U normal approximation
+RQ4,V0 vs V3 F0 C100,V0,V3,group_a_baseline,F0,100,,P95,10,10,110.8858,87.72070000000001,-23.165099999999995,-20.890952673831993,-0.17,-66.4048390518864,20.074639051886408,0.5205228832757727,1.0,Mann-Whitney U normal approximation
+RQ4,V0 vs V4 F0 C100,V0,V4,group_a_baseline,F0,100,,P95,10,10,110.8858,125.2543,14.368499999999997,12.95792608251011,0.46,-14.563169825312258,43.30016982531225,0.08209870865427454,0.49259225192564726,Mann-Whitney U normal approximation
+RQ4,V0 vs V5 F0 C100,V0,V5,group_a_baseline,F0,100,,P95,10,10,110.8858,121.8037,10.917900000000003,9.846075872654572,0.42,-23.457897952297827,45.29369795229783,0.11241058465536365,0.5620529232768182,Mann-Whitney U normal approximation

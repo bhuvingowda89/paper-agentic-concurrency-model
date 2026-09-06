@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+server:
+  port: ${SERVER_PORT:8090}
+services:
+  order: ${ORDER_SERVICE_URL:http://localhost:8081}
+  payment: ${PAYMENT_SERVICE_URL:http://localhost:8082}
+  inventory: ${INVENTORY_SERVICE_URL:http://localhost:8083}
+  notification: ${NOTIFICATION_SERVICE_URL:http://localhost:8084}
+

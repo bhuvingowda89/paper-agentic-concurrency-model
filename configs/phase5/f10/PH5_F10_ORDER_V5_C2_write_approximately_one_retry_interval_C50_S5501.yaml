@@ -1,0 +1,31 @@
+experiment:
+  id: PH5_F10_ORDER_V5_C2_write_approximately_one_retry_interval_C50_S5501
+workload:
+  type: create_order
+  operations: 500
+  concurrency: 50
+  warmup_operations: 0
+architecture:
+  variant: V5
+  downstream_capability: C2
+failure:
+  scenario: F10
+  probability: 1.0
+  seed: 5501
+  mode: write
+  outage_attempts: 2
+retry:
+  max_attempts: 5
+  backoff:
+    type: exponential
+    initial_ms: 10
+    jitter: seeded
+timeouts:
+  client_ms: 2000
+  downstream_ms: 2000
+lease:
+  ms: 200
+output:
+  raw_events: true
+  operation_summary: true
+  metrics: true

@@ -1,0 +1,23 @@
+{
+  "analysis_user_can_read": true,
+  "forbidden_source_hits": [],
+  "pass": true,
+  "permission_checks": [
+    {
+      "select_denied": true,
+      "stderr": "ERROR:  permission denied for table observer_effects",
+      "user": "runtime_service"
+    },
+    {
+      "select_denied": true,
+      "stderr": "ERROR:  permission denied for schema observer\nLINE 1: SELECT count(*) FROM observer.observer_effects;\n                             ^",
+      "user": "gateway_user"
+    },
+    {
+      "select_denied": true,
+      "stderr": "ERROR:  permission denied for schema observer\nLINE 1: SELECT count(*) FROM observer.observer_effects;\n                             ^",
+      "user": "orchestrator_user"
+    }
+  ],
+  "reconciliation_path": "Runtime reconciliation relies on downstream C2 lookup and not observer ground truth."
+}

@@ -1,0 +1,15 @@
+{
+  "attempt_sequence": "see events.csv",
+  "downstream_calls": "see events.csv and operations.csv",
+  "downstream_capability": "C0",
+  "effect_creation": "see effects.csv",
+  "experiment_id": "RESERVEINVENTORY_V0_C0_F3_P10_C50_S7000",
+  "final_state": "see operations.csv",
+  "injected_failure": "F3",
+  "ledger_transitions": "see ledger_transitions.csv when non-empty",
+  "logical_operation": "RESERVEINVENTORY_V0_C0_F3_P10_C50_S7000_OP_00001004",
+  "retry_replay_reconciliation": "replayed_ops=0;reconciled_ops=0",
+  "trace_label": "inventory",
+  "variant": "V0",
+  "workload": "reserve_inventory"
+}

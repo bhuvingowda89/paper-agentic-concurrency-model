@@ -1,0 +1,13 @@
+comparison,experimental_conditions,sample_size,primary_metric,variant_A_estimate,variant_B_estimate,absolute_difference,relative_difference,95% CI,effect_size,raw_p_value,adjusted_p_value,concise_data_only_observation
+V0 vs V2,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09956,0.0,-0.09956,-100.0,-0.10079312231708329..-0.0983268776829167,-1.0,0.0,0.0,DER changed by -0.09956 from A to B
+V0 vs V4,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09956,0.0,-0.09956,-100.0,-0.10079312231708329..-0.0983268776829167,-1.0,0.0,0.0,DER changed by -0.09956 from A to B
+V0 vs V5,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09956,0.0,-0.09956,-100.0,-0.10079312231708329..-0.0983268776829167,-1.0,0.0,0.0,DER changed by -0.09956 from A to B
+V2 vs V4,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B
+V2 vs V5,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B
+V4 vs V5,group=group_b_ambiguous;failure_scenario=F3;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B
+V0 vs V2,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09892,0.0,-0.09892,-100.0,-0.10035519355876171..-0.09748480644123828,-1.0,0.0,0.0,DER changed by -0.09892 from A to B
+V0 vs V4,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09892,0.0,-0.09892,-100.0,-0.10035519355876171..-0.09748480644123828,-1.0,0.0,0.0,DER changed by -0.09892 from A to B
+V0 vs V5,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.09892,0.0,-0.09892,-100.0,-0.10035519355876171..-0.09748480644123828,-1.0,0.0,0.0,DER changed by -0.09892 from A to B
+V2 vs V4,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B
+V2 vs V5,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B
+V4 vs V5,group=group_b_ambiguous;failure_scenario=F8;concurrency=50;failure_probability=0.1,10 vs 10,DER,0.0,0.0,0.0,0.0,0.0..0.0,0.0,1.0,1.0,DER changed by 0.0 from A to B

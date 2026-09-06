@@ -1,0 +1,15 @@
+{
+  "attempt_sequence": "see events.csv",
+  "downstream_calls": "see events.csv and operations.csv",
+  "downstream_capability": "C0",
+  "effect_creation": "see effects.csv",
+  "experiment_id": "CREATEORDER_V0_C0_F6_P0_C50_FAN10_S7000",
+  "final_state": "see operations.csv",
+  "injected_failure": "F6",
+  "ledger_transitions": "see ledger_transitions.csv when non-empty",
+  "logical_operation": "CREATEORDER_V0_C0_F6_P0_C50_FAN10_S7000_OP_00001000",
+  "retry_replay_reconciliation": "replayed_ops=0;reconciled_ops=0",
+  "trace_label": "v0_f6_fanout10",
+  "variant": "V0",
+  "workload": "create_order"
+}

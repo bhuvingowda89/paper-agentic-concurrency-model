@@ -1,0 +1,29 @@
+experiment:
+  id: CREATEORDER_V3_C1_F2_P10_C50_S7006
+workload:
+  type: create_order
+  operations: 10000
+  concurrency: 50
+  warmup_operations: 1000
+architecture:
+  variant: V3
+  downstream_capability: C1
+failure:
+  scenario: F2
+  probability: 0.1
+  seed: 7006
+retry:
+  max_attempts: 5
+  backoff:
+    type: exponential
+    initial_ms: 10
+    jitter: seeded
+timeouts:
+  client_ms: 2000
+  downstream_ms: 2000
+lease:
+  ms: 200
+output:
+  raw_events: true
+  operation_summary: true
+  metrics: true

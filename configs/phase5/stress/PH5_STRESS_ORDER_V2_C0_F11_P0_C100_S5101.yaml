@@ -1,0 +1,30 @@
+experiment:
+  id: PH5_STRESS_ORDER_V2_C0_F11_P0_C100_S5101
+workload:
+  type: create_order
+  operations: 1000
+  concurrency: 100
+  warmup_operations: 0
+architecture:
+  variant: V2
+  downstream_capability: C0
+failure:
+  scenario: F11
+  probability: 0.0
+  seed: 5101
+  retry_fanout: 10
+retry:
+  max_attempts: 5
+  backoff:
+    type: exponential
+    initial_ms: 10
+    jitter: seeded
+timeouts:
+  client_ms: 2000
+  downstream_ms: 2000
+lease:
+  ms: 200
+output:
+  raw_events: true
+  operation_summary: true
+  metrics: true

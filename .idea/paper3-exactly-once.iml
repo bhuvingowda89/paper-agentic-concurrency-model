@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/results" />
+      <excludeFolder url="file://$MODULE_DIR$/orchestrator/target" />
+      <excludeFolder url="file://$MODULE_DIR$/services/inventory-service/target" />
+      <excludeFolder url="file://$MODULE_DIR$/services/notification-service/target" />
+      <excludeFolder url="file://$MODULE_DIR$/services/order-service/target" />
+      <excludeFolder url="file://$MODULE_DIR$/services/payment-service/target" />
+      <excludeFolder url="file://$MODULE_DIR$/tool-gateway/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

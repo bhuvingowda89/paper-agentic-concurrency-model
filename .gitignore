@@ -1,0 +1,17 @@
+results/**
+!results/.gitkeep
+.venv/
+__pycache__/
+*.pyc
+
+!results/phase7/
+!results/phase7/**
+target/
+.mvn/
+*.log
+.DS_Store
+
+results/phase6/
+.DS_Store
+__pycache__/
+*.pyc

@@ -1,0 +1,14 @@
+scenario_id,injection_location,deterministic,probabilistic_supported,expected_ambiguity_classification,test_coverage
+F0,none,true,false,none,T10 and pilot baseline
+F1,agent simulator BEFORE_GATEWAY_RECEIVE,true,true,safe no-execution loss,runner path
+F2,orchestrator BEFORE_DOWNSTREAM_DISPATCH,true,true,safe retryable pre-dispatch,T10 deterministic plan coverage
+F3,orchestrator after downstream effect before response/confirmation,true,true,ambiguous response loss,T4 and pilot
+F4,orchestrator AFTER_DOWNSTREAM_RESPONSE delay,true,true,ambiguous delayed response,scenario wiring
+F5,agent simulator sequential duplicate,true,false,duplicate replay behavior,T2
+F6,agent simulator concurrent duplicate fanout,true,false,concurrent duplicate,T3 and pilot
+F7,orchestrator BEFORE_DOWNSTREAM_DISPATCH,true,true,safe pre-dispatch crash,scenario wiring
+F8,orchestrator after downstream commit while ledger remains EXECUTING until lease expiry,true,true,ambiguous crash-after-effect,T5 T7 and pilot
+F9,orchestrator BEFORE_FINAL_RESULT_PERSIST,true,true,effect confirmed but final replay incomplete,scenario wiring
+F10,orchestrator LEDGER_READ or LEDGER_WRITE app-layer outage,true,true,temporary infrastructure failure without effect,F10 targeted test
+F11,agent simulator RETRY_STORM same operation fanout,true,false,retry amplification,F11 targeted test
+F12,orchestrator ambiguous after downstream dispatch with C0 lookup unavailable,true,true,unresolved ambiguity,T8

@@ -1,0 +1,30 @@
+family,comparison,variant_a,variant_b,group,failure_scenario,concurrency,failure_probability,metric
+RQ1,V0 vs V2,V0,V2,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V0 vs V4,V0,V4,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V0 vs V5,V0,V5,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V2 vs V4,V2,V4,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V2 vs V5,V2,V5,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V4 vs V5,V4,V5,group_b_ambiguous,F3,50,0.1,DER
+RQ1,V0 vs V2,V0,V2,group_b_ambiguous,F8,50,0.1,DER
+RQ1,V0 vs V4,V0,V4,group_b_ambiguous,F8,50,0.1,DER
+RQ1,V0 vs V5,V0,V5,group_b_ambiguous,F8,50,0.1,DER
+RQ1,V2 vs V4,V2,V4,group_b_ambiguous,F8,50,0.1,DER
+RQ1,V2 vs V5,V2,V5,group_b_ambiguous,F8,50,0.1,DER
+RQ1,V4 vs V5,V4,V5,group_b_ambiguous,F8,50,0.1,DER
+RQ2,V2 C0 vs C1,V2,V2,group_d_capability,F8,,,UAR
+RQ2,V2 C1 vs C2,V2,V2,group_d_capability,F8,,,UAR
+RQ2,V4 C0 vs C1,V4,V4,group_d_capability,F8,,,UAR
+RQ2,V4 C1 vs C2,V4,V4,group_d_capability,F8,,,UAR
+RQ2,V5 C1 vs C2,V5,V5,group_d_capability,F8,,,RSR
+RQ3,V4 vs V5 under F8,V4,V5,group_b_ambiguous,F8,50,0.1,UAR
+RQ3,V4 vs V5 under F9,V4,V5,group_b_ambiguous,F9,50,0.1,UAR
+RQ3,V0 vs V5 under F6 fanout 10,V0,V5,group_c_duplicates,F6,,,DAF
+RQ3,V0 vs V5 under F11 fanout 10,V0,V5,group_c_duplicates,F11,,,DAF
+RQ4,V0 vs V2 F0 C50,V0,V2,group_a_baseline,F0,50,,P95
+RQ4,V0 vs V3 F0 C50,V0,V3,group_a_baseline,F0,50,,P95
+RQ4,V0 vs V4 F0 C50,V0,V4,group_a_baseline,F0,50,,P95
+RQ4,V0 vs V5 F0 C50,V0,V5,group_a_baseline,F0,50,,P95
+RQ4,V0 vs V2 F0 C100,V0,V2,group_a_baseline,F0,100,,P95
+RQ4,V0 vs V3 F0 C100,V0,V3,group_a_baseline,F0,100,,P95
+RQ4,V0 vs V4 F0 C100,V0,V4,group_a_baseline,F0,100,,P95
+RQ4,V0 vs V5 F0 C100,V0,V5,group_a_baseline,F0,100,,P95

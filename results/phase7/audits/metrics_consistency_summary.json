@@ -1,0 +1,7 @@
+{
+  "failed_experiment_ids": [],
+  "pass": true,
+  "rrr_definition": "RRR recomputed from measured agent_attempt events; replayed measured attempts divided by measured retry requests.",
+  "runs_checked": 3340,
+  "unexplained_discrepancies": 0
+}

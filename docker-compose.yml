@@ -1,0 +1,113 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: exactlyonce
+      POSTGRES_USER: exactlyonce
+      POSTGRES_PASSWORD: exactlyonce
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/migrations:/migrations:ro
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U exactlyonce -d exactlyonce"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  migrator:
+    image: postgres:16
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./database/migrations:/migrations:ro
+    environment:
+      PGPASSWORD: exactlyonce
+    command: ["psql", "-h", "db", "-U", "exactlyonce", "-d", "exactlyonce", "-f", "/migrations/V1__initial_schema.sql"]
+
+  order-service:
+    build: ./services/order-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: runtime_service
+      SPRING_DATASOURCE_PASSWORD: runtime_service
+      SERVER_PORT: 8081
+      SERVICE_NAME: order-service
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8081:8081"]
+
+  payment-service:
+    build: ./services/payment-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: runtime_service
+      SPRING_DATASOURCE_PASSWORD: runtime_service
+      SERVER_PORT: 8082
+      SERVICE_NAME: payment-service
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8082:8082"]
+
+  inventory-service:
+    build: ./services/inventory-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: runtime_service
+      SPRING_DATASOURCE_PASSWORD: runtime_service
+      SERVER_PORT: 8083
+      SERVICE_NAME: inventory-service
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8083:8083"]
+
+  notification-service:
+    build: ./services/notification-service
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: runtime_service
+      SPRING_DATASOURCE_PASSWORD: runtime_service
+      SERVER_PORT: 8084
+      SERVICE_NAME: notification-service
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8084:8084"]
+
+  orchestrator:
+    build: ./orchestrator
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: orchestrator_user
+      SPRING_DATASOURCE_PASSWORD: orchestrator_user
+      SERVER_PORT: 8090
+      ORDER_SERVICE_URL: http://order-service:8081
+      PAYMENT_SERVICE_URL: http://payment-service:8082
+      INVENTORY_SERVICE_URL: http://inventory-service:8083
+      NOTIFICATION_SERVICE_URL: http://notification-service:8084
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8090:8090"]
+
+  tool-gateway:
+    build: ./tool-gateway
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/exactlyonce
+      SPRING_DATASOURCE_USERNAME: gateway_user
+      SPRING_DATASOURCE_PASSWORD: gateway_user
+      SERVER_PORT: 8080
+      ORCHESTRATOR_URL: http://orchestrator:8090
+    depends_on:
+      migrator:
+        condition: service_completed_successfully
+    ports: ["8080:8080"]
+
+volumes:
+  pgdata:
+

@@ -1,0 +1,83 @@
+{
+  "stage": "6E",
+  "substage": "",
+  "name": "Stage 6E",
+  "planned": 180,
+  "already_complete": 0,
+  "newly_completed": 180,
+  "infra_retries": 0,
+  "invalid": 0,
+  "pending": 0,
+  "failed_blocked": 0,
+  "running": 0,
+  "memory_restart_observations": {
+    "resource_snapshot": {
+      "docker": true,
+      "docker_mem_total_bytes": 8319504384,
+      "postgresql": true,
+      "containers": 7,
+      "restart_counts": {
+        "paper3-exactly-once-db-1": 0,
+        "paper3-exactly-once-inventory-service-1": 0,
+        "paper3-exactly-once-notification-service-1": 0,
+        "paper3-exactly-once-orchestrator-1": 0,
+        "paper3-exactly-once-order-service-1": 0,
+        "paper3-exactly-once-payment-service-1": 0,
+        "paper3-exactly-once-tool-gateway-1": 0
+      },
+      "container_memory": [
+        {
+          "name": "paper3-exactly-once-db-1",
+          "mem_usage": "252.7MiB / 7.748GiB",
+          "mem_perc": "3.18%",
+          "cpu_perc": "0.07%"
+        },
+        {
+          "name": "paper3-exactly-once-inventory-service-1",
+          "mem_usage": "175.1MiB / 7.748GiB",
+          "mem_perc": "2.21%",
+          "cpu_perc": "0.22%"
+        },
+        {
+          "name": "paper3-exactly-once-notification-service-1",
+          "mem_usage": "166.6MiB / 7.748GiB",
+          "mem_perc": "2.10%",
+          "cpu_perc": "0.23%"
+        },
+        {
+          "name": "paper3-exactly-once-orchestrator-1",
+          "mem_usage": "174.4MiB / 7.748GiB",
+          "mem_perc": "2.20%",
+          "cpu_perc": "0.22%"
+        },
+        {
+          "name": "paper3-exactly-once-order-service-1",
+          "mem_usage": "175.9MiB / 7.748GiB",
+          "mem_perc": "2.22%",
+          "cpu_perc": "0.22%"
+        },
+        {
+          "name": "paper3-exactly-once-payment-service-1",
+          "mem_usage": "174.6MiB / 7.748GiB",
+          "mem_perc": "2.20%",
+          "cpu_perc": "0.23%"
+        },
+        {
+          "name": "paper3-exactly-once-tool-gateway-1",
+          "mem_usage": "177.9MiB / 7.748GiB",
+          "mem_perc": "2.24%",
+          "cpu_perc": "0.18%"
+        }
+      ],
+      "pg_connections": 6,
+      "db_size_bytes": 8862743,
+      "host_memory": {
+        "vm_stat": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                               12019.\nPages active:                            243071.\nPages inactive:                          239659.\nPages speculative:                         3133.\nPages throttled:                              0.\nPages wired down:                        117957.\nPages purgeable:                           5542.\n\"Translation faults\":                1872071343.\nPages copy-on-write:                   44297587.\nPages zero filled:                    743611095.\nPages reactivated:                    257742978.\nPages purged:                           4799157.\nFile-backed pages:                       171960.\nAnonymous pages:                         313903.\nPages stored in compressor:              825294.\nPages occupied by compressor:            392306.\nDecompressions:                       218783261.\nCompressions:                         230829396.\nPageins:                               67309508.\nPageouts:                                244725.\nSwapins:                                 744172.\nSwapouts:                                877302.",
+        "memory_pressure": "The system has 17179869184 (1048576 pages with a page size of 16384).\n\nStats: \nPages free: 12146 \nPages purgeable: 5542 \nPages purged: 4799157 \n\nSwap I/O:\nSwapins: 744172 \nSwapouts: 877302 \n\nPage Q counts:\nPages active: 243066 \nPages inactive: 239669 \nPages speculative: 3133 \nPages throttled: 0 \nPages wired down: 117956 \n\nCompressor Stats:\nPages used by compressor: 392306 \nPages decompressed: 218783261 \nPages compressed: 230829396 \n\nFile I/O:\nPageins: 67309509 \nPageouts: 244725 \n\nSystem-wide memory free percentage: 49%"
+      },
+      "free_disk_bytes": 39344791552
+    },
+    "application_recycling_policy": "every 10 newly completed experiments"
+  },
+  "updated_at_unix": 1788679387.129167
+}

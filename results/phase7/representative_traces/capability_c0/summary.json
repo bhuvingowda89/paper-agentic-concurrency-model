@@ -1,0 +1,18 @@
+{
+  "DAF": 1.0,
+  "DER": 0.0,
+  "EOER": 1.0,
+  "LER": 0.0,
+  "P50": 18.583,
+  "P95": 72.401,
+  "P99": 143.243,
+  "RAF": 1.4104,
+  "RRR": 0.0,
+  "RSR": 0.0,
+  "UAR": 0.1026,
+  "fault_injected": 10000,
+  "logical_operations": 10000,
+  "reached_fault_hook": 10000,
+  "selected_for_fault": 986,
+  "throughput": 635.3930128437645
+}

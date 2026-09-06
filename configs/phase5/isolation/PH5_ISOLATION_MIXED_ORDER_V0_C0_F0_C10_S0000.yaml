@@ -1,0 +1,29 @@
+experiment:
+  id: PH5_ISOLATION_MIXED_ORDER_V0_C0_F0_C10_S0000
+workload:
+  type: create_order
+  operations: 150
+  concurrency: 10
+  warmup_operations: 0
+architecture:
+  variant: V0
+  downstream_capability: C0
+failure:
+  scenario: F0
+  probability: 0.0
+  seed: 6000
+retry:
+  max_attempts: 5
+  backoff:
+    type: exponential
+    initial_ms: 10
+    jitter: seeded
+timeouts:
+  client_ms: 2000
+  downstream_ms: 2000
+lease:
+  ms: 200
+output:
+  raw_events: true
+  operation_summary: true
+  metrics: true

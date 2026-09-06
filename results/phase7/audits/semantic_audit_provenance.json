@@ -1,0 +1,9 @@
+{
+  "generated_at_unix": 1788706962.987975,
+  "observer_independence_pass": true,
+  "ownership_violations_bytes": 0,
+  "pass": true,
+  "phase7_action": "copied final Phase 6 semantic audit outputs after Phase 7 run-level extraction verified all 3340 final COMPLETE runs usable",
+  "source": "results/phase6 final global audit outputs",
+  "state_transition_violations_bytes": 0
+}
