@@ -3,6 +3,7 @@ results/**
 .venv/
 __pycache__/
 *.pyc
+*.tar.zst
 
 !results/phase7/
 !results/phase7/**
